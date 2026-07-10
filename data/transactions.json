@@ -1,0 +1,722 @@
+[
+  {
+    "id": 1,
+    "type": "expense",
+    "amount": 23.5,
+    "category": "餐饮",
+    "note": "公司楼下吃面",
+    "date": "2025-01-03",
+    "createdAt": "2026-07-10T08:53:39.053Z"
+  },
+  {
+    "id": 2,
+    "type": "expense",
+    "amount": 15,
+    "category": "交通",
+    "note": "地铁充值",
+    "date": "2025-01-03",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 3,
+    "type": "income",
+    "amount": 8500,
+    "category": "工资",
+    "note": "1月工资",
+    "date": "2025-01-05",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 4,
+    "type": "expense",
+    "amount": 2200,
+    "category": "房租",
+    "note": "1月房租",
+    "date": "2025-01-05",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 5,
+    "type": "expense",
+    "amount": 45,
+    "category": "餐饮",
+    "note": "和同事吃火锅AA",
+    "date": "2025-01-06",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 6,
+    "type": "expense",
+    "amount": 12.5,
+    "category": "餐饮",
+    "note": "早餐豆浆油条",
+    "date": "2025-01-07",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 7,
+    "type": "expense",
+    "amount": 128,
+    "category": "购物",
+    "note": "淘宝买衣服",
+    "date": "2025-01-08",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 8,
+    "type": "expense",
+    "amount": 35,
+    "category": "交通",
+    "note": "打车去客户那",
+    "date": "2025-01-09",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 9,
+    "type": "expense",
+    "amount": 9.9,
+    "category": "娱乐",
+    "note": "视频月度会员",
+    "date": "2025-01-10",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 10,
+    "type": "expense",
+    "amount": 66,
+    "category": "餐饮",
+    "note": "周末请朋友吃饭",
+    "date": "2025-01-11",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 11,
+    "type": "expense",
+    "amount": 200,
+    "category": "医疗",
+    "note": "感冒去医院",
+    "date": "2025-01-13",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 12,
+    "type": "expense",
+    "amount": 18,
+    "category": "餐饮",
+    "note": "外卖炒饭",
+    "date": "2025-01-14",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 13,
+    "type": "expense",
+    "amount": 3.5,
+    "category": "交通",
+    "note": "公交",
+    "date": "2025-01-15",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 14,
+    "type": "expense",
+    "amount": 89,
+    "category": "购物",
+    "note": "京东买书",
+    "date": "2025-01-16",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 15,
+    "type": "income",
+    "amount": 86.5,
+    "category": "餐饮",
+    "note": "超市买菜",
+    "date": "2025-01-17",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 16,
+    "type": "expense",
+    "amount": 55,
+    "category": "饮食",
+    "note": "麦当劳",
+    "date": "2025-01-18",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 17,
+    "type": "expense",
+    "amount": 0,
+    "category": "交通",
+    "note": "同事顺路载我",
+    "date": "2025-01-19",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 18,
+    "type": "expense",
+    "amount": 1500,
+    "category": "数码",
+    "note": "买机械键盘",
+    "date": "2025-01-20",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 19,
+    "type": "expense",
+    "amount": 42,
+    "category": "餐饮",
+    "note": "点外卖",
+    "date": "2025-01-21",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 20,
+    "type": "income",
+    "amount": 500,
+    "category": "兼职",
+    "note": "帮朋友修电脑",
+    "date": "2025-01-22",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 21,
+    "type": "expense",
+    "amount": 28,
+    "category": "餐饮",
+    "note": "午饭",
+    "date": "2025-01-23",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 22,
+    "type": "expense",
+    "amount": 15,
+    "category": "交通",
+    "note": "地铁",
+    "date": "2025-01-24",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 23,
+    "type": "expense",
+    "amount": 399,
+    "category": "购物",
+    "note": "买跑鞋",
+    "date": "2025-01-25",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 24,
+    "type": "expense",
+    "amount": 32,
+    "category": "餐饮",
+    "note": "晚饭",
+    "date": "2025-01-27",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 25,
+    "type": "expense",
+    "amount": 8,
+    "category": "餐饮",
+    "note": "早餐",
+    "date": "2025-01-28",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 26,
+    "type": "expense",
+    "amount": 168,
+    "category": "社交",
+    "note": "同事生日送礼",
+    "date": "2025-01-29",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 27,
+    "type": "expense",
+    "amount": 22.5,
+    "category": "餐饮",
+    "note": "午饭便当",
+    "date": "2025-02-01",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 28,
+    "type": "expense",
+    "amount": 15,
+    "category": "交通",
+    "note": "地铁充值",
+    "date": "2025-02-02",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 29,
+    "type": "income",
+    "amount": 8500,
+    "category": "工资",
+    "note": "2月工资",
+    "date": "2025-02-05",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 30,
+    "type": "expense",
+    "amount": 2200,
+    "category": "房租",
+    "note": "2月房租",
+    "date": "2025-02-05",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 31,
+    "type": "expense",
+    "amount": -50,
+    "category": "餐饮",
+    "note": "退款上次多收的",
+    "date": "2025-02-06",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 32,
+    "type": "expense",
+    "amount": 38,
+    "category": "餐饮",
+    "note": "同事聚餐",
+    "date": "2025-02-07",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 33,
+    "type": "expense",
+    "amount": 15,
+    "category": "交通",
+    "note": "打车",
+    "date": "2025-02-08",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 34,
+    "type": "expense",
+    "amount": 260,
+    "category": "购物",
+    "note": "过年买年货",
+    "date": "2025-02-09",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 35,
+    "type": "expense",
+    "amount": 99999.99,
+    "category": "餐饮",
+    "note": "午饭",
+    "date": "2025-02-10",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 36,
+    "type": "expense",
+    "amount": 11,
+    "category": "餐饮",
+    "note": "早餐",
+    "date": "2025-02-11",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 37,
+    "type": "expense",
+    "amount": 800,
+    "category": "红包",
+    "note": "给爸妈发红包",
+    "date": "2025-02-12",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 38,
+    "type": "expense",
+    "amount": 600,
+    "category": "红包",
+    "note": "给侄子压岁钱",
+    "date": "2025-02-12",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 39,
+    "type": "income",
+    "amount": 200,
+    "category": "红包",
+    "note": "收到姑姑红包",
+    "date": "2025-02-12",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 40,
+    "type": "expense",
+    "amount": 45,
+    "category": "餐饮",
+    "note": "年夜饭食材分摊",
+    "date": "2025-02-13",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 41,
+    "type": "expense",
+    "amount": 120,
+    "category": "娱乐",
+    "note": "KTV",
+    "date": "2025-02-14",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 42,
+    "type": "expense",
+    "amount": 9.9,
+    "category": "娱乐",
+    "note": "视频月度会员",
+    "date": "2025-02-15",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 43,
+    "type": "expense",
+    "amount": 19,
+    "category": "餐饮",
+    "note": "奶茶",
+    "date": "2025-02-17",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 44,
+    "type": "expense",
+    "amount": 350,
+    "category": "购物",
+    "note": "买春装",
+    "date": "2025-02-18",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 45,
+    "type": "expense",
+    "amount": 25,
+    "category": "餐饮",
+    "note": "煎饼果子+豆浆",
+    "date": "2025-02-19",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 46,
+    "type": "expense",
+    "amount": 15,
+    "category": "交通",
+    "note": "地铁",
+    "date": "2025-02-20",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 47,
+    "type": "expense",
+    "amount": 48,
+    "category": "餐饮",
+    "note": "午饭",
+    "date": "2025-02-30",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 48,
+    "type": "expense",
+    "amount": 33,
+    "category": "餐饮",
+    "note": "外卖",
+    "date": "2025-02-22",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 49,
+    "type": "expense",
+    "amount": 15,
+    "category": "交通",
+    "note": "公交充值",
+    "date": "2025-02-24",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 50,
+    "type": "expense",
+    "amount": 75,
+    "category": "购物",
+    "note": "超市日用品",
+    "date": "2025-02-25",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 51,
+    "type": "expense",
+    "amount": 18.5,
+    "category": "餐饮",
+    "note": "午饭",
+    "date": "2025-03-01",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 52,
+    "type": "expense",
+    "amount": 15,
+    "category": "交通",
+    "note": "地铁充值",
+    "date": "2025-03-02",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 53,
+    "type": "income",
+    "amount": 9000,
+    "category": "工资",
+    "note": "3月工资（涨薪了）",
+    "date": "2025-03-05",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 54,
+    "type": "expense",
+    "amount": 2200,
+    "category": "房租",
+    "note": "3月房租",
+    "date": "2025-03-05",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 55,
+    "type": "expense",
+    "amount": 56,
+    "category": "餐饮",
+    "note": "请同事喝奶茶",
+    "date": "2025-03-06",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 56,
+    "type": "expense",
+    "amount": 25,
+    "category": "交通",
+    "note": "打车加班回家",
+    "date": "2025-03-07",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 57,
+    "type": "expense",
+    "amount": 199,
+    "category": "购物",
+    "note": "买耳机",
+    "date": "2025-03-08",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 58,
+    "type": "expense",
+    "amount": 12,
+    "category": "餐饮",
+    "note": "早餐",
+    "date": "2025-03-10",
+    "createdAt": "2026-07-10T08:53:39.054Z"
+  },
+  {
+    "id": 58,
+    "type": "expense",
+    "amount": 88,
+    "category": "社交",
+    "note": "随份子",
+    "date": "2025-03-11",
+    "createdAt": "2026-07-10T08:53:39.055Z"
+  },
+  {
+    "id": 59,
+    "type": "expense",
+    "amount": 9.9,
+    "category": "娱乐",
+    "note": "视频月度会员",
+    "date": "2025-03-12",
+    "createdAt": "2026-07-10T08:53:39.055Z"
+  },
+  {
+    "id": 60,
+    "type": "expense",
+    "amount": 42,
+    "category": "餐饮",
+    "note": "外卖披萨",
+    "date": "2025-03-13",
+    "createdAt": "2026-07-10T08:53:39.055Z"
+  },
+  {
+    "id": 61,
+    "type": "expense",
+    "amount": 15,
+    "category": "交通",
+    "note": "地铁",
+    "date": "2025-03-14",
+    "createdAt": "2026-07-10T08:53:39.055Z"
+  },
+  {
+    "id": 62,
+    "type": "expense",
+    "amount": 680,
+    "category": "数码",
+    "note": "买鼠标",
+    "date": "2025-03-15",
+    "createdAt": "2026-07-10T08:53:39.055Z"
+  },
+  {
+    "id": 63,
+    "type": "expense",
+    "amount": 28,
+    "category": "餐饮",
+    "note": "午饭",
+    "date": "2025-03-17",
+    "createdAt": "2026-07-10T08:53:39.055Z"
+  },
+  {
+    "id": 64,
+    "type": "expense",
+    "amount": 15,
+    "category": "交通",
+    "note": "公交",
+    "date": "2025-03-18",
+    "createdAt": "2026-07-10T08:53:39.055Z"
+  },
+  {
+    "id": 65,
+    "type": "income",
+    "amount": 35,
+    "category": "交通",
+    "note": "帮同事代买地铁票他转我的",
+    "date": "2025-03-19",
+    "createdAt": "2026-07-10T08:53:39.055Z"
+  },
+  {
+    "id": 66,
+    "type": "expense",
+    "amount": 156,
+    "category": "购物",
+    "note": "淘宝买日用品",
+    "date": "2025-03-20",
+    "createdAt": "2026-07-10T08:53:39.055Z"
+  },
+  {
+    "id": 67,
+    "type": "expense",
+    "amount": 39,
+    "category": "餐饮",
+    "note": "晚饭",
+    "date": "2025-03-21",
+    "createdAt": "2026-07-10T08:53:39.055Z"
+  },
+  {
+    "id": 69,
+    "type": "expense",
+    "amount": 300,
+    "category": "医疗",
+    "note": "牙科检查",
+    "date": "2025-03-24",
+    "createdAt": "2026-07-10T08:53:39.055Z"
+  },
+  {
+    "id": 70,
+    "type": "expense",
+    "amount": 18,
+    "category": "餐饮",
+    "note": "早餐+午饭",
+    "date": "2025-03-25",
+    "createdAt": "2026-07-10T08:53:39.055Z"
+  },
+  {
+    "id": 71,
+    "type": "expense",
+    "amount": 888,
+    "category": "社交",
+    "note": "送女朋友礼物",
+    "date": "2025-03-26",
+    "createdAt": "2026-07-10T08:53:39.055Z"
+  },
+  {
+    "id": 72,
+    "type": "expense",
+    "amount": 55,
+    "category": "餐饮",
+    "note": "和女朋友吃饭",
+    "date": "2025-03-27",
+    "createdAt": "2026-07-10T08:53:39.055Z"
+  },
+  {
+    "id": 73,
+    "type": "expense",
+    "amount": 9.9,
+    "category": "娱乐",
+    "note": "视频月度会员",
+    "date": "2025-04-01",
+    "createdAt": "2026-07-10T08:53:39.055Z"
+  },
+  {
+    "id": 74,
+    "type": "expense",
+    "amount": 20,
+    "category": "餐饮",
+    "note": "午饭",
+    "date": "2025-04-02",
+    "createdAt": "2026-07-10T08:53:39.055Z"
+  },
+  {
+    "id": 75,
+    "type": "income",
+    "amount": 9000,
+    "category": "工资",
+    "note": "4月工资",
+    "date": "2025-04-05",
+    "createdAt": "2026-07-10T08:53:39.055Z"
+  },
+  {
+    "id": 76,
+    "type": "expense",
+    "amount": 2200,
+    "category": "房租",
+    "note": "4月房租",
+    "date": "2025-04-05",
+    "createdAt": "2026-07-10T08:53:39.055Z"
+  },
+  {
+    "id": 77,
+    "type": "expense",
+    "amount": 65,
+    "category": "餐饮",
+    "note": "同事聚餐",
+    "date": "2025-04-06",
+    "createdAt": "2026-07-10T08:53:39.055Z"
+  },
+  {
+    "id": 78,
+    "type": "expense",
+    "amount": 15,
+    "category": "交通",
+    "note": "地铁",
+    "date": "2025-04-07",
+    "createdAt": "2026-07-10T08:53:39.055Z"
+  },
+  {
+    "id": 79,
+    "type": "expense",
+    "amount": 459,
+    "category": "购物",
+    "note": "买夏装",
+    "date": "2025-04-08",
+    "createdAt": "2026-07-10T08:53:39.055Z"
+  },
+  {
+    "id": 80,
+    "type": "expense",
+    "amount": 33,
+    "category": "餐饮",
+    "note": "外卖",
+    "date": "2025-04-09",
+    "createdAt": "2026-07-10T08:53:39.055Z"
+  }
+]

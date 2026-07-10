@@ -32,8 +32,26 @@ class AccountService {
      * 月度统计
      */
     getMonthlySummary(year, month) {
-        // TODO: 实现月度统计
-        return null;
+        const all = this.storage.findAll();
+        const prefix = `${year}-${String(month).padStart(2, "0")}`;
+        let income = 0;
+        let expense = 0;
+
+        for (const t of all) {
+            if (!t.date || !t.date.startsWith(prefix)) continue;
+            const cents = Math.round(t.amount * 100);
+            if (t.type === "income") {
+                income += cents;
+            } else if (t.type === "expense") {
+                expense += cents;
+            }
+        }
+
+        return {
+            income,
+            expense,
+            net: income - expense
+        };
     }
 
     /**
@@ -49,7 +67,8 @@ class AccountService {
             if (t.type !== "expense") continue;
             if (t.date && t.date.startsWith(prefix)) {
                 const cents = Math.round(t.amount * 100);
-                categoryTotals[t.catgory] = (categoryTotals[t.catgory] || 0) + cents;
+                const category = t.catgory || t.category || "未分类";
+                categoryTotals[category] = (categoryTotals[category] || 0) + cents;
                 totalExpense += cents;
             }
         }
@@ -59,7 +78,7 @@ class AccountService {
             result.push({
                 category: cat,
                 amount: amount,
-                percentage: Math.floor(amount / totalExpense) * 100
+                percentage: totalExpense === 0 ? 0 : Number(((amount / totalExpense) * 100).toFixed(2))
             });
         }
         return result;
@@ -69,8 +88,23 @@ class AccountService {
      * 导出 CSV
      */
     exportCSV(filepath) {
-        // TODO: 实现
+        const fs = require("fs");
+        const all = this.storage.findAll();
+        const lines = ["日期,类型,金额,分类,备注"];
+
+        for (const t of all) {
+            lines.push([
+                t.date || "",
+                t.type || "",
+                t.amount,
+                t.category || t.catgory || "",
+                t.note || ""
+            ].join(","));
+        }
+
+        fs.writeFileSync(filepath, lines.join("\n"), "utf-8");
     }
 }
+
 
 module.exports = AccountService;

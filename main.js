@@ -43,6 +43,7 @@ rl.on("line", (line) => {
             console.log("功能待实现");
             break;
         case "stats":
+        case "summary":
             // TODO: 统计信息
             console.log("功能待实现");
             break;
@@ -50,6 +51,7 @@ rl.on("line", (line) => {
         case "exit":
             console.log("再见！");
             process.exit(0);
+            break;
         default:
             console.log(`未知命令：${command}，输入 help 查看帮助`);
     }
@@ -58,9 +60,10 @@ rl.on("line", (line) => {
 
 function printHelp() {
     console.log("命令列表：");
-    console.log("  add    - 添加记录");
-    console.log("  list   - 查看记录");
-    console.log("  delete - 删除记录");
-    console.log("  stats  - 统计信息");
-    console.log("  exit   - 退出");
+    console.log("  add     - 添加记录");
+    console.log("  list    - 查看记录");
+    console.log("  delete  - 删除记录");
+    console.log("  summary - 月度统计");
+    console.log("  stats   - 月度统计");
+    console.log("  exit    - 退出");
 }

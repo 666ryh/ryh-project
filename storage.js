@@ -6,12 +6,16 @@ const path = require("path");
 const Transacton = require("./model");
 
 const DATA_FILE = path.join(__dirname, "data", "transactions.json");
+const CSV_FILE = path.join(__dirname, "..", "data", "data.csv");
 
 class JsonStorage {
     constructor() {
         this._cache = [];
         this._nextId = 1;
         this._load();
+        if (this._cache.length === 0) {
+            this._loadCSV();
+        }
     }
 
     /**
@@ -52,7 +56,7 @@ class JsonStorage {
      * 按分类查询
      */
     findByCategory(category) {
-        return this._cache.filter(t => t.catgory === category);
+        return this._cache.filter(t => (t.category || t.catgory) === category);
     }
 
     /**
@@ -92,7 +96,46 @@ class JsonStorage {
                 this._nextId = Math.max(...this._cache.map(t => t.id)) + 1;
             }
         } catch (e) {
-            // 加载失败
+            // FIX: 旧 JSON 数据加载失败时不抛出异常，保证程序仍可从 CSV 继续初始化
+        }
+    }
+
+    _loadCSV() {
+        try {
+            if (!fs.existsSync(CSV_FILE)) return;
+            const raw = fs.readFileSync(CSV_FILE, "utf-8");
+            const lines = raw.split(/\r?\n/).filter(line => line.trim());
+            if (lines.length <= 1) return;
+
+            const items = [];
+            for (let i = 1; i < lines.length; i++) {
+                const line = lines[i];
+                const cols = line.split(",");
+                if (cols.length < 6) continue;
+
+                const id = Number(cols[0]);
+                const type = cols[1].trim();
+                const amount = Number(cols[2]);
+                const category = cols[3].trim();
+                const note = cols[4].trim();
+                const date = cols.slice(5).join(",").trim();
+
+                if (!id || !type || Number.isNaN(amount) || !category || !date) continue;
+                if (type !== "income" && type !== "expense") continue;
+                if (!/^\d{4}[-/]\d{2}[-/]\d{2}$/.test(date)) continue;
+
+                const normalizedDate = date.includes("/") ? date.replace(/\//g, "-") : date;
+                const normalizedCategory = category.trim();
+                items.push(new Transacton(id, type, amount, normalizedCategory, note, normalizedDate));
+            }
+
+            this._cache = items;
+            if (this._cache.length > 0) {
+                this._nextId = Math.max(...this._cache.map(t => t.id)) + 1;
+            }
+            this._write();
+        } catch (e) {
+            // FIX: CSV 初始化失败时保持空缓存，避免启动阶段崩溃
         }
     }
 
