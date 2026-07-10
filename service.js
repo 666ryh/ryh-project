@@ -29,6 +29,26 @@ class AccountService {
     }
 
     /**
+     * 获取全部交易记录，按金额降序排列
+     */
+    getAllTransactions() {
+        const all = this.storage.findAll();
+        const list = [...all];
+
+        for (let i = 0; i < list.length - 1; i++) {
+            for (let j = 0; j < list.length - 1 - i; j++) {
+                if (list[j].amount < list[j + 1].amount) {
+                    const temp = list[j];
+                    list[j] = list[j + 1];
+                    list[j + 1] = temp;
+                }
+            }
+        }
+
+        return list;
+    }
+
+    /**
      * 月度统计
      */
     getMonthlySummary(year, month) {
@@ -67,7 +87,7 @@ class AccountService {
             if (t.type !== "expense") continue;
             if (t.date && t.date.startsWith(prefix)) {
                 const cents = Math.round(t.amount * 100);
-                const category = t.catgory || t.category || "未分类";
+                const category = t.category || t.catgory || "未分类";
                 categoryTotals[category] = (categoryTotals[category] || 0) + cents;
                 totalExpense += cents;
             }
@@ -81,6 +101,8 @@ class AccountService {
                 percentage: totalExpense === 0 ? 0 : Number(((amount / totalExpense) * 100).toFixed(2))
             });
         }
+
+        result.sort((a, b) => b.amount - a.amount);
         return result;
     }
 
