@@ -13,10 +13,12 @@ const rl = readline.createInterface({
     prompt: "> "
 });
 
-console.log("=== 个人记账本 ===");
-console.log("输入 help 查看命令列表");
-printAll();
-rl.prompt();
+const session = {
+    loggedIn: false,
+    username: ""
+};
+
+bootstrap();
 
 rl.on("line", (line) => {
     const trimmed = line.trim();
@@ -51,6 +53,9 @@ rl.on("line", (line) => {
         case "export":
             handleExport(parts[1]);
             break;
+        case "passwd":
+            handlePassword(parts[1], parts[2], parts[3]);
+            break;
         case "quit":
         case "exit":
             console.log("再见！");
@@ -62,6 +67,60 @@ rl.on("line", (line) => {
     rl.prompt();
 });
 
+function bootstrap() {
+    if (!service.storage.hasAuth()) {
+        rl.question("首次使用，请设置用户名：", (username) => {
+            rl.question("请设置口令：", (password) => {
+                service.storage.createAuth(username.trim(), password);
+                service.storage._password = password;
+                session.loggedIn = true;
+                session.username = username.trim();
+                console.log("账户创建成功，请记住你的用户名和口令");
+                printWelcome();
+            });
+        });
+        return;
+    }
+
+    loginFlow();
+}
+
+function loginFlow() {
+    const savedUsername = service.storage.getAuthUsername();
+    let attempts = 0;
+
+    const askPassword = () => {
+        rl.question(`用户名：${savedUsername}\n口令：`, (password) => {
+            if (service.storage.verifyAuth(savedUsername, password)) {
+                service.storage._password = password;
+                session.loggedIn = true;
+                session.username = savedUsername;
+                console.log("登录成功");
+                printWelcome();
+                return;
+            }
+
+            attempts++;
+            console.log("口令错误");
+            if (attempts >= 3) {
+                console.log("连续 3 次验证失败，程序退出");
+                process.exit(1);
+                return;
+            }
+            askPassword();
+        });
+    };
+
+    askPassword();
+}
+
+function printWelcome() {
+    console.log("=== 个人记账本 ===");
+    console.log("输入 help 查看命令列表");
+    printAll();
+    rl.prompt();
+}
+
 function printHelp() {
     console.log("命令列表：");
     console.log("  add      - 添加记录");
@@ -71,6 +130,7 @@ function printHelp() {
     console.log("  stats    - 月度统计");
     console.log("  category - 分类统计");
     console.log("  export   - 导出 CSV");
+    console.log("  passwd   - 修改口令");
     console.log("  exit     - 退出");
 }
 
@@ -164,4 +224,25 @@ function handleExport(filePath) {
     }
     service.exportCSV(target);
     console.log(`已导出到 ${target}`);
+}
+
+function handlePassword(oldPassword, newPassword, confirmPassword) {
+    if (!oldPassword || !newPassword || !confirmPassword) {
+        console.log("用法：passwd <oldPassword> <newPassword> <confirmPassword>");
+        return;
+    }
+
+    if (newPassword !== confirmPassword) {
+        console.log("两次新口令不一致");
+        return;
+    }
+
+    const ok = service.storage.updatePassword(session.username, oldPassword, newPassword);
+    if (!ok) {
+        console.log("旧口令验证失败");
+        return;
+    }
+
+    service.storage._password = newPassword;
+    console.log("口令修改成功");
 }
